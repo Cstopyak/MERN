@@ -1,0 +1,92 @@
+// <Router>
+      <div className="App">
+        {/* <Switch>
+          <Route path="/checkout">
+            <Header />
+            <h1> Checkout page</h1>
+          </Route>
+          <Router path="/login">
+            <Header />
+            <h1> Login page</h1>
+          </Router>
+          <Route path="/">
+            
+            <Header />
+            <Main />
+          </Route>
+          <Route>
+            <Router path="/product/new" />
+            <h1> add product page</h1>
+          </Route>
+        </Switch> */}
+
+        <Router>
+        <OneProduct path="/product/:_id" />
+        <UpdateProduct path="/product/update/:_id" />
+      </div>
+    </Router>
+
+
+    //from original Header
+    <div className="header__nav">
+                <Link to="/product/new" className="header__link">
+                    <div className="header__option">
+                        <span className="header__optionLineOne"> Returns</span>
+                        <span className="header__optionLineTwo">orders</span>
+                    </div>
+                </Link>
+
+
+                productcard.js
+
+                 <Card className="xyz">
+            <CardActionArea>
+                <CardMedia
+                    className="{classes.media}"
+                    image="/static/images/cards/contemplative-reptile.jpg"
+                    title="Contemplative Reptile"
+                />
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                        Lizard
+          </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                        across all continents except Antarctica
+          </Typography>
+                </CardContent>
+            </CardActionArea>
+            <CardActions>
+                <Button size="small" color="primary">
+                    Share
+        </Button>
+                <Button size="small" color="primary">
+                    Learn More
+        </Button>
+            </CardActions>
+        </Card>
+
+
+        form
+        import React, {useState, useEffect} from 'react'
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+
+const Form = props => {
+    return (
+        <form onSubmit={props.onSubmitHandler}>
+            <label htmlFor= "title"> title</label>
+            <input type="text" name="title" onChange={props.onChangeHandler} value= {props.form.title}/>
+            <label htmlFor= "image"> Image</label>
+            <input type="text" name="image" onChange={props.onChangeHandler} value= {props.form.image}/>
+            <label htmlFor= "price"> price</label>
+            <input type="number" name="price" onChange={props.onChangeHandler} value = {props.form.price}/>
+            <label htmlFor= "description"> description</label>
+            <input type="text" name="description" onChange={props.onChangeHandler} value = {props.form.description}/>
+             <label htmlFor= "rating"> Rating</label>
+            <input type="text" name="rating" onChange={props.onChangeHandler} value= {props.form.rating}/>
+            <input type="submit" value="Submit"/>
+        </form>
+    )
+}
+
+export default Form;

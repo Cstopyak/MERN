@@ -1,0 +1,11 @@
+OOP 
+
+4 pillars of OOP
+
+abstraction - only showing what you need to use
+
+inheritance - taking info from parent class and giving to a child
+
+encapsulation - grouping things - protect variables like private harder to change and public accessible anywhere
+
+polymorphism - take somethign that already exists and be able to modify it to suite our needs

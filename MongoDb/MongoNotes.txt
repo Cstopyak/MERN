@@ -1,0 +1,121 @@
+db.students.insert({name: "Colby", home_state: "IL", lucky_number: "7", birthday: {month: "12", day: "12", year: "1992"}})
+db.students.insert({name: "Cody", home_state: "Ca", lucky_number: "7", birthday: {month: "04", day: "11", year: "1997"}})
+db.students.insert({name: "Sam", home_state: "Ca", lucky_number: "49", birthday: {month: "12", day: "12", year: "1996"}})
+db.students.insert({name: "Nikki", home_state: "Ca", lucky_number: "23", birthday: {month: "11", day: "22", year: "1992"}})
+db.students.insert({name: "mike", home_state: "Ca", lucky_number: "11", birthday: {month: "03", day: "12", year: "1996"}})
+
+
+{ "_id" : ObjectId("6004772921e72302b9b18eb0"), "name" : "Colby", "home_state" : "IL", "lucky_number" : "7", "birthday" : { "month" : "12", "day" : "12", "year" : "1992" } }
+{ "_id" : ObjectId("6004777621e72302b9b18eb1"), "name" : "mike", "home_state" : "Ca", "lucky_number" : "11", "birthday" : { "month" : "03", "day" : "12", "year" : "1996" } }
+{ "_id" : ObjectId("6004779621e72302b9b18eb2"), "name" : "Nikki", "home_state" : "Ca", "lucky_number" : "23", "birthday" : { "month" : "11", "day" : "22", "year" : "1992" } }
+{ "_id" : ObjectId("600477b321e72302b9b18eb3"), "name" : "Sam", "home_state" : "Ca", "lucky_number" : "49", "birthday" : { "month" : "12", "day" : "12", "year" : "1996" } }
+{ "_id" : ObjectId("600477d121e72302b9b18eb4"), "name" : "Cody", "home_state" : "Ca", "lucky_number" : "7", "birthday" : { "month" : "04", "day" : "11", "year" : "1997" } }
+> db.students.find().pretty
+function() {
+
+> db.students.find().pretty()
+{
+	"_id" : ObjectId("6004772921e72302b9b18eb0"),
+	"name" : "Colby",
+	"home_state" : "IL",
+	"lucky_number" : "7",
+	"birthday" : {
+		"month" : "12",
+		"day" : "12",
+		"year" : "1992"
+	}
+}
+{
+	"_id" : ObjectId("6004777621e72302b9b18eb1"),
+	"name" : "mike",
+	"home_state" : "Ca",
+	"lucky_number" : "11",
+	"birthday" : {
+		"month" : "03",
+		"day" : "12",
+		"year" : "1996"
+	}
+}
+{
+	"_id" : ObjectId("6004779621e72302b9b18eb2"),
+	"name" : "Nikki",
+	"home_state" : "Ca",
+	"lucky_number" : "23",
+	"birthday" : {
+		"month" : "11",
+		"day" : "22",
+		"year" : "1992"
+	}
+}
+{
+	"_id" : ObjectId("600477b321e72302b9b18eb3"),
+	"name" : "Sam",
+	"home_state" : "Ca",
+	"lucky_number" : "49",
+	"birthday" : {
+		"month" : "12",
+		"day" : "12",
+		"year" : "1996"
+	}
+}
+{
+	"_id" : ObjectId("600477d121e72302b9b18eb4"),
+	"name" : "Cody",
+	"home_state" : "Ca",
+	"lucky_number" : "7",
+	"birthday" : {
+		"month" : "04",
+		"day" : "11",
+		"year" : "1997"
+	}
+}
+> 
+
+
+ db.students.find({home_state:"Ca"}).pretty()
+{
+	"_id" : ObjectId("6004777621e72302b9b18eb1"),
+	"name" : "mike",
+	"home_state" : "Ca",
+	"lucky_number" : "11",
+	"birthday" : {
+		"month" : "03",
+		"day" : "12",
+		"year" : "1996"
+	}
+}
+{
+	"_id" : ObjectId("6004779621e72302b9b18eb2"),
+	"name" : "Nikki",
+	"home_state" : "Ca",
+	"lucky_number" : "23",
+	"birthday" : {
+		"month" : "11",
+		"day" : "22",
+		"year" : "1992"
+	}
+}
+{
+	"_id" : ObjectId("600477b321e72302b9b18eb3"),
+	"name" : "Sam",
+	"home_state" : "Ca",
+	"lucky_number" : "49",
+	"birthday" : {
+		"month" : "12",
+		"day" : "12",
+		"year" : "1996"
+	}
+}
+{
+	"_id" : ObjectId("600477d121e72302b9b18eb4"),
+	"name" : "Cody",
+	"home_state" : "Ca",
+	"lucky_number" : "7",
+	"birthday" : {
+		"month" : "04",
+		"day" : "11",
+		"year" : "1997"
+	}
+}
+> 
+db.students.find({lucky_number:{$gt:3}}).pretty()
