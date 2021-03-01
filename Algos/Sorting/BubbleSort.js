@@ -35,7 +35,7 @@ def BubbleSort(array);
     console.log(BubbleSort(array))
 
 
-//seelction sort
+//selection sort
 function SelectSort(arr){
     for(var i = 0; i < arr.legnth; i++){
         var idx = i;
@@ -76,8 +76,26 @@ function bubble_sort(arr) {
     return arr
 }
 
-var arr = [5,9,2,7,6];
-var arr2 = [5, -6, 200, 10, 13, 7, 0, 15]
+var arr = [8, 5, 2, 9, 5, 6, 3];
+
 bubble_sort(arr)
-bubble_sort(arr2)
+
+//bubble sort example two 
+
+function Bubble(arr){
+    let j = 0;
+    while(j < arr.length-1){
+        for(var i = 0; i <arr.length-1; i++){
+            if(arr[i] > arr[i+1]){
+                let temp = arr[i+1];
+                arr[i+1] = arr[i];
+                arr[i] = temp;
+            }
+        }
+        j++;
+    }
+    return arr;
+}
+console.log(Bubble([5,3,8,4,0]));
+
 

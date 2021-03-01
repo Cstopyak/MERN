@@ -1,0 +1,44 @@
+.Home{
+    
+    
+    background: #C33764;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.Home__Grid{
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    height: 100%;
+background: #C33764;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.Banner{
+    width: 100%;
+    margin: auto;
+    padding: auto;
+    opacity: 1;
+    
+}
+
+.Banner h1{
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 70px;
+}
+
+.Banner hr{
+    border-top: 5px solid white;
+    width: 60%;
+    margin: auto;
+}
+
+.Banner p{
+    color: white;
+    padding: 1em;
+    font-weight: bold;
+}

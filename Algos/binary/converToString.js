@@ -53,4 +53,3 @@ dec2bin(25)
 
 
 console.log(Number(25).toString(2))
-Instructor_SaurabhD

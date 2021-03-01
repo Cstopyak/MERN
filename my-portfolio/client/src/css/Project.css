@@ -1,0 +1,14 @@
+.Project{
+    text-align: center;
+    position: fixed;
+    margin: auto;
+    position: relative;
+}
+
+.Project__Card{
+    display: inline-flex;
+    margin: auto;
+    
+    
+    padding: 5px 5px 5px 5px;
+}
