@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import "../css/Contact.css";
 import { Grid, Cell, Button } from 'react-mdl';
-class Contact extends Component {
-    render() {
+const Contact = () => {
+
         return (
             <div className="Contact__Container">
                 {/* <div className="Contact__Form">
@@ -35,8 +35,8 @@ class Contact extends Component {
                     </div>
                 </div> */}
                 <div className="Contact">
-                    <Grid className="Contact__Grid">
-                        <Cell col={12}>
+                    <div className="Contact__Grid">
+                        
 
                             <div className="Banner">
                                 <h1> Lets Get In Touch</h1>
@@ -70,11 +70,11 @@ class Contact extends Component {
                                 </div>
                                 
                             </form>
-                        </Cell>
-                    </Grid>
+                        
+                    </div>
                 </div>
             </div>
         )
     }
-}
+
 export default Contact;

@@ -3,7 +3,12 @@ import { Link } from 'react-router-dom';
 import './App.css';
 import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
 import Main from './components/Main';
-
+import Home from './components/Home';
+import About from './components/About';
+import Project from './components/Project';
+import Resume from './components/Resume';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -12,7 +17,7 @@ class App extends Component {
         <Layout>
           <Header className="header-color" title="Hi, I'm Colby" scroll>
             <Navigation>
-            <Link to="/">Home</Link>
+              <Link to="/">Home</Link>
               <Link to="/about">About</Link>
               <Link to="/projects">Projects</Link>
               <Link to="/resume">Resume</Link>
@@ -34,6 +39,7 @@ class App extends Component {
           <Content>
             <div className="page-content" />
             <Main />
+            <Footer/>
           </Content>
         </Layout>
       </div>
