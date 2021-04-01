@@ -12,4 +12,4 @@ const UserController= require('../controllers/user.controller');
         app.get("/api/logout", authenticate, loginRegController.logout);
     }
 
-    module.exports = router;
+    
