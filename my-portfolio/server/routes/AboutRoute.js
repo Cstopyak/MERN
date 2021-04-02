@@ -1,47 +1,33 @@
 const aboutController = require("../controllers/about.controller");
+const router = require('express').Router();
 
-//getting about users
-module.exports = app =>{
-    app.get("/api/about", aboutController.findAll);
-
-    app.get("/api/about/:_id", aboutController.findOneabout);
-
-    app.post("/api/about/new", aboutController.CreateOneabout);
-
-    app.put("/api/about/update/:_id", aboutController.updateOneabout);
-
-    app.delete("/api/about/delete/:_id", aboutController.deleteOneabout);
-}
-// const router = require('express').Router();
-// const {getAbout, getAboutId, addAbout, updateAbout, delAbout} = require('../controllers/about.controller');
-
-// const aboutSchema = require('../models/aboutModel');
-
-
-
-// ...........about............
 
 // get about user
-// router.get('/about',getAbout)
 
-// // add about user
-// router.post('/about',addAbout)
-
-
-// // get specific user by id 
+router.get('/about', (req, res)=> {
+    res.send('this is the about server test')
+})
+// get specific user by id 
 // router.get('/about/:id',getAboutId)
 
+// // add about user
+router.post('/about', (req, res)=> {
+    res.send('this is the about post server test')
+})
+// router.post('/about',addAbout)
+router.post('/about/:id', (req, res)=> {
+    res.send('this is the about post server with Id')
+})
 
-//   // update specific user by id
-// router.put('/about/update/:id', updateAbout)
+router.put('/about/update/:id', (req, res)=> {
+    res.send('this is the about edit server test')
+})
+
+router.delete('/about/:id', (req, res)=> {
+    res.send('this is the about delete server test')
+})
+//end about
 
 
-//   // delete specific user by id
-// router.delete('/about/:id', delAbout
-// )
 
-
-
-
-
-// module.exports = router;
+module.exports = router;
