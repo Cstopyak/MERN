@@ -26,3 +26,5 @@ app.use(express.urlencoded({ extended: true }));
 require('./server/routes/user.routes')(app);
 app.use('/', require('./server/routes/aboutRoute'));
 require('./server/config/database.config');
+
+// adding in all routing tomorrow to finish about and admin
