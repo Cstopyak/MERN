@@ -6,7 +6,7 @@ const express = require("express"),
     cors = require("cors"),
     cookieParser = require("cookie-parser");
 server = app.listen(port, () => console.log(`ready to go on port ${port}`));
-
+const fileupload = require('express-fileupload');
 
 
 
@@ -15,12 +15,15 @@ app.use(cookieParser());
 app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(fileupload({
+    useTempFiles:true
+}))
 
 
 
 // bring routes in with the project.
 require('./server/routes/user.routes')(app);
+app.use('/', require('./server/routes/projectRoute'));
 app.use('/', require('./server/routes/aboutRoute'));
 require('./server/config/database.config');
 

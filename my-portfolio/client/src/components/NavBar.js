@@ -14,6 +14,9 @@ class Navbar extends Component {
               <Link to="/projects">Projects</Link>
               <Link to="/resume">Resume</Link>
               <Link to="/contact">Contact</Link>
+              <Link to="/register">Register</Link>
+              <Link to="/Login">Login</Link>
+              <Link to="/Admin">Admin</Link>
 
             </Navigation>
           </Header>
@@ -24,8 +27,9 @@ class Navbar extends Component {
               <Link to="/contact">Contact</Link>
               <Link to="#">LinkedIn</Link>
               <Link to="#">Github</Link>
-              <Link to="#">Link</Link>
-              <Link to="#">Link</Link>
+              <Link to="/register">Register</Link>
+              <Link to="/Login">Login</Link>
+              <Link to="/Admin">Admin</Link>
             </Navigation>
           </Drawer>
           

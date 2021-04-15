@@ -8,13 +8,13 @@ module.exports.getAbout = (req, res ) =>{
 
 module.exports.findOneAbout = (req, res) => {
     Author.findOne({_id: req.params._id})
-        .then(oneAuthor => res.json({oneAbout: oneAbout}))
+        .then(oneAbout => res.json({oneAbout: oneAbout}))
         .catch(err => res.json({message: "Something went wrong when grabbin one About section", error: err}))
 }
 
 module.exports.addAbout = (req, res ) =>{
     aboutController.find()
-    .then(allAbout => res.json({addAbout: addAbout}))
+    .then(addAbout => res.json({addAbout: addAbout}))
     .catch(err => res.json({message: "Something went wrong when adding about", error: err}))
 }
 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState, useEffect } from 'react'
 
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import Home from './Home';
@@ -7,15 +7,32 @@ import Project from './Project';
 import Resume from './Resume';
 import Contact from './Contact';
 import Footer from './Footer';
+import Login from './Login';
+import Register from './Register';
+import EditAbout from './editComponent/EditAbout';
+import EditProject from './editComponent/EditProject';
+
+//admin
+import Admin from './adminComponents/Admin';
+
+
 
 
 function Main() {
+    
     return(
 <Router>
     <Home path ="/" />
     <About path = "/about"/>
     <Project path = "/project" />
     <Contact path = "/contact"/>
+    
+
+
+    
+    <Admin path="/admin" />
+    <EditAbout path="/edit/about/:id" component={EditAbout}/>
+    <EditProject path="/edit/project/:id" />
 {/* <Route>
     
     <Route path="/" component = {Home}/>

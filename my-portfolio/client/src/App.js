@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
+import {Element} from 'react-scroll';
 import './App.css';
 import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
 import Main from './components/Main';
@@ -9,39 +10,24 @@ import Project from './components/Project';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-
+import NavBar from './components/NavBar';
+import Login from './components/Login';
+import Admin from './components/adminComponents/Admin';
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Layout>
-          <Header className="header-color" title="Hi, I'm Colby" scroll>
-            <Navigation>
-              <Link to="/">Home</Link>
-              <Link to="/about">About</Link>
-              <Link to="/projects">Projects</Link>
-              <Link to="/resume">Resume</Link>
-              <Link to="/contact">Contact</Link>
+        
+        <NavBar/>
+        <Main/>
+        <Route exact path="/login" render={()=><Login  />} />
+      
+      <Route exact path="/admin" render={()=><Admin />} />
 
-            </Navigation>
-          </Header>
-          <Drawer title="Portfolio">
-            <Navigation>
-              <Link to="/about">About</Link>
-              <Link to="/resume">Resume</Link>
-              <Link to="/contact">Contact</Link>
-              <Link to="#">LinkedIn</Link>
-              <Link to="#">Github</Link>
-              <Link to="#">Link</Link>
-              <Link to="#">Link</Link>
-            </Navigation>
-          </Drawer>
-          <Content>
-            <div className="page-content" />
-            <Main />
-            <Footer/>
-          </Content>
-        </Layout>
+      
+      
+
+      <Route component={Footer} />
       </div>
       // <div className="App">
 
