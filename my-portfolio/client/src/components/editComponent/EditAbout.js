@@ -1,9 +1,28 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 const EditAbout = () => {
     return (
-        <div>
-            whats up form edit about component
+        <div className="edit">
+            <div className="main-container">
+                <div className="same-component">
+                    <div className="same-form">
+                        <form>
+                            <h3 className="updated">
+                                Updated
+                            </h3>
+                            <label htmlFor="text"> About</label>
+                            <textarea name="textarea" id="" cols="30" rows="3"/>
+
+                            <div className="btns">
+                                <button type="submit"> Update About</button>
+                            
+                            <Link to="/admin"><button type="btn btn-danger">Cancel</button></Link>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     )
 }
