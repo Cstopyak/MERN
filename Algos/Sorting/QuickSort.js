@@ -40,9 +40,9 @@ function QuickSort(arr, pivot){
     partition(arr, 0, arr.length - 1);
     return arr;
 }
-console.log(QuickSort(arr)
+console.log(QuickSort(sortArr([7,9,1,6,2,10,8,4,3])))
 
 
 
 
-// sortArr = [7,9,1,6,2,10,8,4,3]
+sortArr = [7,9,1,6,2,10,8,4,3]
