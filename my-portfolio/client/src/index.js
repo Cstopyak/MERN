@@ -6,10 +6,13 @@ import reportWebVitals from './reportWebVitals';
 import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
 import { BrowserRouter } from 'react-router-dom';
-
+import { DataProvider} from './components/myContext/Context';
 ReactDOM.render(
   <BrowserRouter>
+  <DataProvider>
     <App />
+  </DataProvider>
+    
   </BrowserRouter>,
   document.getElementById('root')
 );

@@ -3,12 +3,21 @@ import { DataContext } from './myContext/Context';
 
 const About = () => {
     const state= useContext(DataContext);
+    const [about] = state.about;
 
         return (
             <div className="main-container">
-                <div className="about">
+                
+                    {about.map(item=>(
+                        <div className="about">
                     <h2 className="title"> About</h2>
-                </div>
+                    <p>
+                    {item.about}
+
+                    </p>
+                    </div>
+                    ))}
+                
                     
             </div>
         )
