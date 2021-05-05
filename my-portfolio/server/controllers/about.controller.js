@@ -1,32 +1,85 @@
-const aboutController= require("../models/about.model");
+const aboutSchema = require("../models/about.model");
+//from lines from 6-12 this is dynamically imported from Route to controller to make the route cleaner.
 
-module.exports.getAbout = (req, res ) =>{
-    aboutController.find()
-    .then(allAbout => res.json({allAbout: allAbout}))
-    .catch(err => res.json({message: "Something went wrong when gathering get req about", error: err}))
+
+//get about user
+exports.getAbout = async (req, res) => {
+    // res.send('hello from about server')
+    const about = await aboutSchema.find();
+
+    try {
+        res.json(about);
+    } catch (error) {
+        res.status(500).json({ msg: 'server problem getting about' })
+    }
+
 }
 
-module.exports.findOneAbout = (req, res) => {
-    Author.findOne({_id: req.params._id})
-        .then(oneAbout => res.json({oneAbout: oneAbout}))
-        .catch(err => res.json({message: "Something went wrong when grabbin one About section", error: err}))
+
+//add about user
+exports.addAbout = async (req, res) => {
+    const { about } = req.body;
+
+    try {
+
+        const newAbout = new aboutSchema({
+            about
+        })
+
+        await newAbout.save();
+        res.json(newAbout);
+
+    } catch (error) {
+        res.status(500).json({ msg: 'server problem when adding' })
+    }
+
+
 }
 
-module.exports.addAbout = (req, res ) =>{
-    aboutController.find()
-    .then(addAbout => res.json({addAbout: addAbout}))
-    .catch(err => res.json({message: "Something went wrong when adding about", error: err}))
+//get specific about id
+exports.getAboutId = async (req, res) => {
+
+    try {
+        const about = await aboutSchema.findById(req.params.id);
+        res.json(about);
+
+    } catch (error) {
+        res.status(500).json({ msg: 'server problem getting specific id' })
+    }
+
+
 }
 
-module.exports.updateOneAbout = (req, res ) => {
-    aboutController.findOneAndUpdate({_id: req.params._id}, req.body, {runValidators: true})
-        .then(oneAbout => res.json({About: oneAbout}))
-        .catch(err => res.json({message: "something went wrong when updating abouts", error: err}))
+//update specific about user by id
+exports.updateAbout = async (req, res) => {
+    const { about } = req.body;
+
+    try {
+        const newAbout = await aboutSchema.findByIdAndUpdate(req.params.id, {
+
+            about
+
+        });
+
+        let results = await newAbout.save();
+        await results;
+        res.json({ msg: 'Item updated' })
+
+    }
+    catch (error) {
+        res.status(500).json({ msg: 'server problem when updating about' })
+    }
+
+
+
 }
 
-//deleting one thing
-module.exports.deleteOneAbout = (req, res ) => {
-    aboutController.deleteOne({_id: req.params._id})
-        .then(res.json({message: "item deleted"}))
-        .catch(err => res.json({message: "something went wrong when deleting", error: err}))
+// delete specific about 
+exports.delAbout = async (req, res) => {
+    const about = await aboutSchema.findByIdAndDelete(req.params.id)
+
+    about;
+
+    res.json({ msg: " About item deleted" })
+
 }

@@ -1,31 +1,24 @@
-const aboutController = require("../controllers/about.controller");
 const router = require('express').Router();
-const aboutSchema = require('../models/about.model');
-
+const {getAbout, getAboutId, addAbout, updateAbout, delAbout} = require('../controllers/about.controller');
+const aboutScheme= require('../models/about.model');
 // get about user
 
-router.get('/about', (req, res)=> {
-    res.send('this is the about  get server test')
-})
-// get specific user by id 
-// router.get('/about/:id',getAboutId)
+router.get('/about', getAbout)
 
 // // add about user
-router.post('/about', (req, res)=> {
-    res.send('this is the about post server test lets add')
-})
-// router.post('/about',addAbout)
-router.get('/about/:id', (req, res)=> {
-    res.send('this is the about get server with Id')
-})
+router.post('/about',addAbout)
 
-router.put('/about/update/:id', (req, res)=> {
-    res.send('this is the about edit server test')
-})
 
-router.delete('/about/:id', (req, res)=> {
-    res.send('this is the about delete server test')
-})
+
+// Specific route
+router.get('/about/:id', getAboutId)
+
+
+//update specific about
+router.put('/about/update/:id', updateAbout)
+
+//deleting about
+router.delete('/about/:id', delAbout)
 //end about
 
 
