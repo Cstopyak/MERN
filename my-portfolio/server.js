@@ -3,7 +3,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const fileUpload = require('express-fileupload');
-const path = require('path');
 const app = express();
 
 // middleware 
@@ -40,7 +39,7 @@ app.use('/contact', require('./server/routes/ContactRoute'));
 app.use('/user', require('./server/routes/user.routes'));
 app.use('/' ,require('./server/routes/projectRoute'));
 app.use('/', require('./server/routes/aboutRoute'));
-// app.use('/', require('./routes/upload'));
+app.use('/', require('./server/routes/upload'));
 
 
 

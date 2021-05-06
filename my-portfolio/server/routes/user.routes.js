@@ -1,4 +1,4 @@
-const { authenticate } = require('../config/jwt.config');
+const { authenticate } = require('../configs/jwt.config');
 const loginRegController = require('../controllers/loginReg.controller');
 const UserController= require('../controllers/user.controller');
    
