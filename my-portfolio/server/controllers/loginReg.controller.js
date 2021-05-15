@@ -48,7 +48,7 @@ module.exports = {
 
                         }
                         else{
-                            consolg.log('KALSJHDLSKJFH')
+                            consolog.log('KALSJHDLSKJFH')
                             res.status(400).json({msg:"INVALID LOGIN ATTEMPT!!!"})
                         }
                     })

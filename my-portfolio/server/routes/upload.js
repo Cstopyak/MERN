@@ -25,7 +25,7 @@ router.post('/upload', (req, res) => {
             return res.status(400).send('no files uploaded this time')
         }
 
-        const file = req.files.portfolio;
+        const file = req.files.file; //put portfolio is this doesnt work
         if (file.size > 1024*1024) {
             removeTmp(file.tempFilePath);
             return res.status(400).json({ msg: 'file size too big' })
@@ -55,7 +55,25 @@ router.post('/upload', (req, res) => {
 })
 
 //delete image process
+router.post('/destroy', (req, res) => { //in postman make sure its in json or no pictures deleted will keep hitting
+    const {public_id} = req.body;
+    try {
+        if(!public_id){
+            return res.status(400).json({msg: "no pictures selected"})
+        }
+    
+        cloudinary.v2.uploader.destroy(public_id, async(err, result) =>{
+    
+            if(err) throw err;
+            res.json({msg: "picture deleted"})
+            
+        })
 
+
+    } catch (err) {
+        res.status(500).json({ msg: err.message })
+    }
+})
 
 
 const removeTmp = (path) => {
