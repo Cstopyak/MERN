@@ -17,7 +17,7 @@ const AboutAdmin = () => {
 
         const fetchData = async () => {
             try {
-                const res = await axios.get('./about');
+                const res = await axios.get('/about');
                 console.log(res.data);
                 setAboutData(res.data);
 
@@ -51,7 +51,7 @@ const AboutAdmin = () => {
                 aboutData.map(item =>(
                     <div className="about-info" key={item._id}>
                     <div className="icons">
-                        <Link to={"/edit"} > <i className="fasfa-edit">edit</i></Link>
+                        <Link to={"/edit"} > <i className="fas fa-edit">edit</i></Link>
                         <i className="fas fa-trash">delete</i>
                     </div>
                     <p> {item.about}</p>
@@ -68,7 +68,7 @@ const AboutAdmin = () => {
                     </p>
                 </div> */}
             </div>
-            <h3 className="item__Delete"> Item Deleted</h3>
+            <h3 className={setMessage ? "new-delete item-delete-tab": "item-delete-tab"}> {message}</h3>
 
         </div>
     )

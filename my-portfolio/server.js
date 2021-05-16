@@ -36,7 +36,7 @@ useUnifiedTopology:true
 
 
 app.use('/contact', require('./server/routes/ContactRoute'));
-app.use('/user', require('./server/routes/user.routes'));
+app.use('/user', require('./server/routes/userRoutes'));
 app.use('/' ,require('./server/routes/projectRoute'));
 app.use('/', require('./server/routes/aboutRoute'));
 app.use('/', require('./server/routes/upload'));

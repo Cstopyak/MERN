@@ -40,6 +40,7 @@ const NavBar = () => {
             <li><Link to="/">About</Link></li>
             <li><Link to="/">Projects</Link></li>
             <li className="admin"><Link to="/">Admin</Link></li>
+            <li><Link to="/login">Login</Link></li>
             <li><Link to="/">Contact</Link></li>
           </ul>
         </div>
