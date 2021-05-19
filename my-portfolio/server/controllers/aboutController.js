@@ -1,10 +1,9 @@
-const aboutSchema = require("../models/about.model");
+const aboutSchema = require("../models/aboutModel");
 //from lines from 6-12 this is dynamically imported from Route to controller to make the route cleaner.
 
 
 //get about user
 exports.getAbout = async (req, res) => {
-    // res.send('hello from about server')
     const about = await aboutSchema.find();
 
     try {

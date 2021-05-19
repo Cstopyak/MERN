@@ -3,7 +3,7 @@ import "../css/Login.css";
 import Register from './Register';
 import { Link, useHistory } from 'react-router-dom';
 import axios from 'axios';
-import { DataContext } from './myContext/Context';
+// import { DataContext } from './context/GlobalContext';
 
 
 

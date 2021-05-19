@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "../css/Contact.css";
-import { Grid, Cell, Button } from 'react-mdl';
+// import { Grid, Cell, Button } from 'react-mdl';
 const Contact = () => {
 
         return (
@@ -65,7 +65,7 @@ const Contact = () => {
                                             rows="10"></textarea>
                                     </div>
                                     <div className="send-btn">
-                                        <Button raised colored className="Button__style" type="submit">Send Email</Button>
+                                        <button raised colored className="Button__style" type="submit">Send Email</button>
                                     </div>
                                 </div>
                                 

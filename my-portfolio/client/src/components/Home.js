@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import "../css/Home.css";
-import { Grid, Cell } from 'react-mdl';
+
 import Footer from './Footer';
 import About from './About';
 import Project from './Project';

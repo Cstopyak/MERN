@@ -1,12 +1,13 @@
 const router = require('express').Router();
-const {getAbout, getAboutId, addAbout, updateAbout, delAbout} = require('../controllers/about.controller');
-const aboutScheme= require('../models/about.model');
+const {getAbout, getAboutId, addAbout, updateAbout, delAbout} = require('../controllers/aboutController');
+// const aboutSchema= require('../models/aboutModel');
+
 // get about user
 
 router.get('/about', getAbout)
 
 // // add about user
-router.post('/about',addAbout)
+router.post('/about', addAbout)
 
 
 

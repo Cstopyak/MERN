@@ -1,6 +1,6 @@
 
 const router = require("express").Router();
-const projectSchema = require('../models/project.model');
+const projectSchema = require('../models/projectModel');
 
 // get project user
 
