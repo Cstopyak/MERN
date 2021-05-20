@@ -1,13 +1,26 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-// import { Layout, Header, Navigation, Drawer, Content } from 'react-mdl';
 import "../css/NavBar.css";
+
+//scroll
+import {scroller} from 'react-scroll';
 
 
 
 
 const NavBar = () => {
   const [toggle, setToggle] = useState();
+
+
+  //scroll
+  const scrollToElement = (element)=>[
+    scroller.scrollTo(element,{
+      duration:800,
+      delay:50,
+      smooth:true,
+      offset:-18
+    })
+  ]
 
 
   //creating toggle functionality
@@ -26,7 +39,7 @@ const NavBar = () => {
     <div className="nav-container">
       <nav>
         <div className="logoBtn">
-          <Link to="/">Hi, I'm Colby</Link>
+          <Link to="/" onClick={()=>scrollToElement('home')}>Hi, I'm Colby</Link>
           <div className="btn" onClick={toggleAction}>
             <div className={toggle ? "bar1 animationBar" : "bar bar1"}></div>
             <div className={toggle ? "bar2 animationBar" : "bar bar2"}></div>

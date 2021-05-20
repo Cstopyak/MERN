@@ -40,6 +40,7 @@ app.use('/user', require('./server/routes/userRoutes'));
 app.use('/' ,require('./server/routes/projectRoute'));
 app.use('/', require('./server/routes/aboutRoute'));
 app.use('/', require('./server/routes/upload'));
+app.use('/' ,require('./server/routes/educationRoute'));
 
 
 

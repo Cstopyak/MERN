@@ -136,6 +136,47 @@ a{
 
 }
 
+/* Begin Education */
 
+.education{
+    margin: 20px 0;
+
+}
+
+.single-education{
+    background: #C33764;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 18px;
+    color: white;
+    padding: 5px 10px;
+    letter-spacing: 0.1rem;
+
+}
+
+@media screen and (min-width:860px){
+    .education-center{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+
+    }
+
+    .single-education{
+        flex: 0 0 calc(50% - 20px);
+        margin-right: 0;
+        margin-left: 0;
+        padding: 20px;
+        clip-path: polygon(0 0,100% 0,95% 100%, 0% 100%);
+        /* might take clip path out looks ugly */
+    }
+}
+
+/* End Education */
 
 
