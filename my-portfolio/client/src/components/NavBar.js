@@ -49,12 +49,15 @@ const NavBar = () => {
         </div>
         <div className="links-container">
           <ul className={toggle ? "new-links links" : "links"} onClick={closeNavbar}>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/">About</Link></li>
-            <li><Link to="/">Projects</Link></li>
+            <li onClick={()=>scrollToElement('home')}><Link to="/">Home</Link></li>
+            <li onClick={()=>scrollToElement('About')}><Link to="/">About</Link></li>
+            <li onClick={()=>scrollToElement('Education')}><Link to="/">Education</Link></li>
+            <li onClick={()=>scrollToElement('Project')}><Link to="/">Projects</Link></li>
+            <li onClick={()=>scrollToElement('Contact')}><Link to="/">Contact</Link></li>
+            
             <li className="admin"><Link to="/">Admin</Link></li>
             <li><Link to="/login">Login</Link></li>
-            <li><Link to="/">Contact</Link></li>
+            
           </ul>
         </div>
 

@@ -19,7 +19,7 @@ import EditProject from './components/editComponent/EditProject';
 import EditEducation from './components/editComponent/EditEducation';
 
 //navbar scroll 
-import {Element} from 'react-scroll';
+import { Element } from 'react-scroll';
 
 
 
@@ -28,30 +28,32 @@ function App() {
     <div className="App">
       <NavBar />
       <Element className='Home'>
-      <Route exact path="/" component={Home} />
-    </Element>
+        <Route exact path="/" component={Home} />
+      </Element>
 
-      <Element className = "About">
-        <Route exact path = "/" component={About}/>
+      <Element className="About">
+        <Route exact path="/" component={About} />
+      </Element>
+
+      <Element className='Education'>
+        <Route exact path="/" component={Education} />
       </Element>
 
       <Element className='Projects'>
-      <Route exact path="/" component={Project} />
-    </Element>
+        <Route exact path="/" component={Project} />
+      </Element>
 
-    <Element className='Contact'>
-      <Route exact path="/" component={Contact} />
-    </Element>
-
-    <Element className='Education'>
-      <Route exact path="/" component={Education} />
-    </Element>
+      <Element className='Contact'>
+        <Route exact path="/" component={Contact} />
+      </Element>
 
 
 
-    <Route exact path="/login" render={()=><Login  />} />
-      
-      <Route exact path="/admin" render={()=><Admin />} />
+
+
+      <Route exact path="/login" render={() => <Login />} />
+
+      <Route exact path="/admin" render={() => <Admin />} />
 
       <Route exact path="/edit/:id" component={EditAbout} />
       <Route exact path="/editProject/:id" component={EditProject} />
