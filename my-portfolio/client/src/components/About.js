@@ -20,6 +20,7 @@ const About = () => {
                 ))}                
             </div>
         </div>
+        
     )
 }
 

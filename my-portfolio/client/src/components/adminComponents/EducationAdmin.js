@@ -1,8 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 
 const EducationAdmin = () => {
+    const [education, setEducation] = useState([]);
+    const [educationData, setEducationData] = useState([]);
+    const [message, setMessage] = useState('');
+    const [messageCondition, setMessageCondition] = useState(false);
+
+
+
+
+    // fetching the data
+    useEffect(() => {
+
+        const fetchData = async () => {
+
+            try {
+                const res = await axios.get(`/education`);
+                setEducationData(res.data);
+                //   console.log(res.data)
+            } catch (err) {
+                console.log(err)
+            }
+        }
+
+        fetchData();
+
+
+
+
+
+    }, [])
+
     return (
         <div className="same-component">
             <div className="same-form">
