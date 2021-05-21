@@ -7,6 +7,7 @@ export const DataProvider = ({ children }) => {
 
     const [about, setAbout] = useState([]);
     const [project, setProject] = useState([]);
+    const [education, setEducation] = useState([]);
 
     const fetchData = async () => {
         const res1 = await axios.get(`/about`);
@@ -15,8 +16,12 @@ export const DataProvider = ({ children }) => {
 
         //fetching projects
         const res2= await axios.get(`/project`);
-        console.log(res2.data);
+        // console.log(res2.data);
         setProject(res2.data);
+
+        const res3= await axios.get(`/education`);
+        // console.log(res3.data);
+        setEducation(res3.data);
 
 
     }
@@ -33,7 +38,8 @@ export const DataProvider = ({ children }) => {
 
     const state = {
         about:[about, setAbout], 
-        project:[project, setProject]
+        project:[project, setProject],
+        education:[education, setEducation]
     }
 
 

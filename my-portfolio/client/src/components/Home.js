@@ -15,7 +15,7 @@ class Home extends Component {
                             <div className="Banner">
                                 <h1> Software Engineer</h1>
                                 <hr />
-                                <p> React | MERN | Java/Spring | Python/Django </p>
+                                <p> React/MERN | Java/Spring | Python/Django </p>
                             
                         </div>
                         

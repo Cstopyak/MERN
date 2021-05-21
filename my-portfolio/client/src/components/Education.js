@@ -1,6 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { DataContext } from '../components/myContext/GlobalContext';
+
+
 
 const Education = () => {
+    const state = useContext(DataContext); 
+    const [education] = state.education;
+    // console.log(education);
+    //ending here for the day need to finish education
+
+
+
+
     return (
         <div className="main-container">
             <div className="education">

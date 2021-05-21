@@ -3,7 +3,7 @@ import { DataContext } from '../components/myContext/GlobalContext';
 
 
 const About = () => {
-   const state = useContext(DataContext); 
+    const state = useContext(DataContext); 
     const [about] = state.about;
     // console.log(about);
 
