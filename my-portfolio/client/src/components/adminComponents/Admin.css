@@ -3,9 +3,12 @@
     padding:10px;
     width: 100%;
 }
-
+/* This is new so counter act the color scheme */
+.same-component{
+    background: gray;
+}
 .admin-title{
-    color:#555;
+    color:white;
     letter-spacing: 0.2rem;
     font-style: italic;
     margin-bottom: 10px;
@@ -20,7 +23,7 @@
     letter-spacing: 0.1rem;
     margin-top: 10px;
     margin-bottom: 3px;
-    color:#424242;
+    color:black;
 
 }
 

@@ -39,8 +39,8 @@ const Contact = () => {
                         
 
                             <div className="Banner">
-                                <h1> Lets Get In Touch</h1>
-                                <hr />
+                            <h2 className="title"> Lets get in touch! </h2>
+                                
                             </div>
                             <form>
 
@@ -65,7 +65,7 @@ const Contact = () => {
                                             rows="10"></textarea>
                                     </div>
                                     <div className="send-btn">
-                                        <button raised colored className="Button__style" type="submit">Send Email</button>
+                                        <button className="button" type="submit">Send Email</button>
                                     </div>
                                 </div>
                                 

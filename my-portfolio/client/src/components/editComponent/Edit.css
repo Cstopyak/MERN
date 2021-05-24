@@ -2,8 +2,9 @@
     min-height: 70vh;
     margin-bottom: 20px;
 }
-
+/* added background to counteraxt the color scheme */
 .edit .same-component{
+    background: white;
     display: block;
     max-width: 400px;
     margin:0 auto;

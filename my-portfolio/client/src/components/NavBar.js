@@ -39,7 +39,7 @@ const NavBar = () => {
     <div className="nav-container">
       <nav>
         <div className="logoBtn">
-          <Link to="/" onClick={()=>scrollToElement('home')}>Hi, I'm Colby</Link>
+        <span><b>Cv:</b> <a href="/#" target="_blank" rel="noreferrer"><i className="fas fa-file-pdf"></i></a></span>
           <div className="btn" onClick={toggleAction}>
             <div className={toggle ? "bar1 animationBar" : "bar bar1"}></div>
             <div className={toggle ? "bar2 animationBar" : "bar bar2"}></div>
@@ -55,7 +55,7 @@ const NavBar = () => {
             <li onClick={()=>scrollToElement('Project')}><Link to="/">Projects</Link></li>
             <li onClick={()=>scrollToElement('Contact')}><Link to="/">Contact</Link></li>
             
-            <li className="admin"><Link to="/">Admin</Link></li>
+            <li className="admin"><Link to="/admin">Admin</Link></li>
             <li><Link to="/login">Login</Link></li>
             
           </ul>

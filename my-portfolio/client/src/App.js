@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import './App.css';
-import Main from './components/Main';
-import Home from './components/Home';
+import Header from './components/Header';
 import About from './components/About';
 import Project from './components/Project';
 import Contact from './components/Contact';
@@ -27,9 +26,13 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <Element className='Home'>
-        <Route exact path="/" component={Home} />
+      
+
+      
+      <Element className='Header'>
+        <Route exact path="/" component={Header} />
       </Element>
+      
 
       <Element className="About">
         <Route exact path="/" component={About} />
