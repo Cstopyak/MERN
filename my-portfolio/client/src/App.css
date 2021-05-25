@@ -45,7 +45,7 @@ a{
 .cv span b{
     font-size: 20px;
     text-transform: capitalize;
-    color:rgb(231,229,229);
+    color:white;
     letter-spacing: 0.1rem;
     font-style: italic;
 
@@ -68,6 +68,7 @@ a{
 }
 
 .banner{
+    padding-top: 10px;
     width: 100%;
     margin: auto;
     padding: auto;
@@ -139,9 +140,7 @@ a{
 
 /* About */
 .about{
-    
-    
-    margin: 20px 0;
+    margin: 0 auto;
 
 }
 .about-info p{
@@ -158,7 +157,10 @@ a{
 } */
 
 /* Project */
-
+.projects{
+    margin: 0 auto;
+    padding-top: 20px;
+}
 .single-project{
     width:100%;
     margin: 0 auto;
@@ -260,7 +262,9 @@ a{
 /* Begin Education */
 
 .education{
-    margin: 20px 0;
+    margin: 0 auto;
+    margin-bottom: 0;
+    padding-top: 10px;
 
 }
 /* added new background to single-educaiton */
@@ -299,3 +303,97 @@ a{
 /* End Education */
 
 
+
+/* Footer */
+.footer{
+    margin: 0 auto;
+}
+.main-contact{
+    
+    background: #C33764;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.contact-center{
+    padding: 20px;
+}
+
+.contact-center-links{
+    margin-bottom: 20px;
+
+}
+
+.contact-center-links h3, .contact-center-media h3{
+    text-align: center;
+    letter-spacing: 0.2rem;
+    color: white;
+    margin-bottom: 10px;
+
+}
+
+.contact-links{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-media{
+    display: flex;
+    justify-content: center;
+}
+
+.contact-media li a{
+    margin: 0 5px;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.contact-media li a:hover{
+    color: gray;
+}
+
+.contact-links li{
+    margin-bottom: 10px;
+    color: white;
+    
+}
+.contact-links li a{
+    margin: 0 5px;
+    padding: 0 2px;
+    color: white;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.contact-links li a:hover{
+    margin: 0 5px;
+    color: gray;
+}
+
+@media screen and (min-width:530px){
+    .contact-links li{
+        margin-bottom: 0;
+    }
+    .contact-links, .contact-media{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width:864px){
+    .contact-media li a i{
+        font-size: 16px;
+
+    }
+}
+
+@media screen and (min-width:864px){
+    .contact-center{
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+}

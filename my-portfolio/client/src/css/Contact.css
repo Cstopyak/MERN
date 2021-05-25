@@ -1,18 +1,115 @@
-.Contact__Container{
-    
-    
-    background: #C33764;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
+.Contact{
+    margin: 0 auto;
+}
+
+.contactForm-center{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+}
+
+.contact_form form{
+    width: 100%;
+    box-shadow: 0 0 2px 1px gray;
+    background: #C33764;  
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);  
     background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact_form form p{
+    margin-bottom: 10px;
+    text-align: center;
+    color:white;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 0.1rem;
+}
+
+.contact_form form label{
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.contact_form button{
+    margin-top: 15px;
+    padding: 5px;
+    background:rgb(19,126,233);
+    outline: none;
+    border:none;
+    cursor: pointer;
+    color:white;
+    font-size:16px;
+    letter-spacing: 0.1rem;
+    width: 160px;
+
+}
+.contact_form form input,.contact_form form textarea{
+    margin-bottom: 10px;
+    padding: 7px;
+    border:1px solid white;
+}
+
+
+
+
+@media screen and (min-width:664px){
+    .contactForm-center{
+        padding: 10px;
+    }
+    .contact_form{
+        padding: 10px;
+        
+    }
+    .contact-info{
+        flex:1;
+        margin-bottom: 0;
+        align-self: center;
+    }
+
+
+    }
+
+    @media screen and (min-width:864px){
+        .contactForm-center{
+            justify-content: space-evenly;
+    }
+
+        .contact_form{
+        
+            padding: 10px;
+        
+        }
+
+        .contact-info{
+            flex:0 0 400px;
+        
+        }
+
+    }
+
+
+
+/* .Contact__Container{
+    margin: 0 auto;
+    
+    background: #C33764;  
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);  
+    background: linear-gradient(to right, #1D2671, #C33764); 
 }
 
 .Contact__Grid{
+    margin: 0 auto;
     width: 100%;
     text-align: center;
     
-background: #C33764;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: #C33764;  
+background: -webkit-linear-gradient(to right, #1D2671, #C33764);  
+background: linear-gradient(to right, #1D2671, #C33764); 
 
 }
 
@@ -36,7 +133,7 @@ background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, F
 .Label{
     font-weight: bold;
     padding-right: 12px;
-}
+} */
 
 
 

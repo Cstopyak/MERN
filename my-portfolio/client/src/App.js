@@ -62,6 +62,8 @@ function App() {
       <Route exact path="/editProject/:id" component={EditProject} />
       <Route exact path="/editEducation/:id" component={EditEducation} />
 
+      <Route component={Footer}/>
+
 
     </div>
   )
