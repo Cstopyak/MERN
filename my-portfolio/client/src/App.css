@@ -1,8 +1,8 @@
 
 .header-color{
-background: #C33764;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #C33764;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
@@ -14,8 +14,8 @@ background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, F
 }
 .main-container{
     background: #C33764;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     max-width: 1280px;
     margin: 0 auto ;
     padding: 0 10px;
@@ -69,7 +69,7 @@ a{
 
 .banner{
     padding-top: 10px;
-    width: 100%;
+    max-width: 1280px;
     margin: auto;
     padding: auto;
     opacity: 1;
@@ -165,7 +165,8 @@ a{
     width:100%;
     margin: 0 auto;
     box-shadow:  0 0 4px 1px gray;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .single-project-img{
@@ -188,15 +189,15 @@ a{
 .single-project-info h3{
     letter-spacing: 0.1rem;
     margin-bottom: 5px;
-    color: whitesmoke;
+    color: white;
 
 }
 .single-project-info p{
-    color: whitesmoke;
+    color: white;
     font-size: 18px;
 }
-@media screen and(min-width:664px){
-    .project-center{
+@media screen and (min-width:664px){
+    .projects-center{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -214,7 +215,7 @@ a{
 }
 
 .single-project-img img{
-    width:300px;
+    width: 300px;
     height: 280px;
 
 }
@@ -222,13 +223,13 @@ a{
 }
 
 
-@media screen and(min-width:964px){
-    .project-center{
+@media screen and (min-width:964px){
+    .projects-center{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         display: flex;
-        max-width: 1180;
+        max-width: 1180px;
         margin: 0 auto;
     }
 
@@ -309,10 +310,9 @@ a{
     margin: 0 auto;
 }
 .main-contact{
-    
     background: #C33764;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .contact-center{

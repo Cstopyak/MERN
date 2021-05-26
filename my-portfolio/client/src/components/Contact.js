@@ -1,7 +1,15 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import "../css/Contact.css";
+import axios from 'axios';
 
 const Contact = () => {
+
+    const [ name, setName ] = useState('');
+    const [ email, setEmail ] = useState('');
+    const [ message, setMessage ] = useState('');
+    const [ banner, setBanner ] = useState('');
+    const [ bool, setBool ] = useState('');
+
 
     return (
         <div className="main-container">
@@ -35,48 +43,7 @@ const Contact = () => {
                 </div>
             </div>
         </div>
-        // <div className="Contact__Container">
 
-        //     <div className="Contact">
-        //         <div className="Contact__Grid">
-
-
-        //                 <div className="Banner">
-        //                 <h2 className="title"> Lets get in touch! </h2>
-
-        //                 </div>
-        //                 <form>
-
-        //                     <div className="Form">
-        //                         <div className="Form__Control">
-        //                             <label className="Label" htmlFor="name"> Name</label>
-        //                             <input type="text" placeholder="name..."
-        //                                 required
-        //                             />
-        //                         </div>
-        //                         <div className="Form__Control">
-        //                             <label className="Label" htmlFor="email"> Email</label>
-        //                             <input type="text" placeholder="email..."
-        //                                 required
-        //                             />
-        //                         </div>
-        //                         <div className="Form__Control">
-        //                             <label className="Label" htmlFor="message"> Message</label>
-        //                         </div>
-        //                         <div className="Form__Control">
-        //                             <textarea type="text" name="message" id="" placeholder='contact reason...' cols="30"
-        //                                 rows="10"></textarea>
-        //                         </div>
-        //                         <div className="send-btn">
-        //                             <button className="button" type="submit">Send Email</button>
-        //                         </div>
-        //                     </div>
-
-        //                 </form>
-
-        //         </div>
-        //     </div>
-        // </div>
     )
 }
 

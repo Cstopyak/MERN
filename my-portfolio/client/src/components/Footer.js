@@ -5,9 +5,7 @@ const Footer = () => {
     return (
         <React.Fragment>
             <div className="main-title">
-                <h2 className="title contact-title">
-                    Hello Footer
-                </h2>
+                {/* took line out to get margin to be better */}
             </div>
 
             <div className="main-contact">
