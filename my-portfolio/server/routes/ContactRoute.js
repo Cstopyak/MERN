@@ -7,21 +7,23 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
     //setup for transporting messages or email
+
+    let data =  req.body;
     let smtpTransport = nodemailer.createTransport({
-        service: 'Gmail',
+        service:'Gmail',
         //port to connect
-        port: 465,
+        port:465,
         //authentication
-        auth: {
-            user: 'colby.stopyak@gmail.com',
-            pass: 'googlecolby21'
+        auth:{
+            user:'colby.stopyak@gmail.com',
+            pass:'googlecolby21'
         }
     })
     let mailOptions = {
-        from: data.email,
-        to: 'colby.stopyak@gmail.com',
-        subject: `Message from ${data.name}`,
-        html: ` <h3> Information </h3>
+        from:data.email,
+        to:'colby.stopyak@gmail.com',
+        subject:`Message from ${data.name}`,
+        html:` <h3> Information </h3>
     <ul> 
         <li> Name: ${data.name}</li>
         <li> Name: ${data.email}</li>
@@ -32,7 +34,7 @@ router.post('/', (req, res) => {
     }
 
 
-    smtpTransport.sendMail(mailOptions, (err, res) => {
+    smtpTransport.sendMail(mailOptions, (err, response) => {
         try {
             if (err) return res.status(400).json({ msg: err })
             else {

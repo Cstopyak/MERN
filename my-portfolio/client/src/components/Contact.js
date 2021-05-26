@@ -4,11 +4,60 @@ import axios from 'axios';
 
 const Contact = () => {
 
-    const [ name, setName ] = useState('');
-    const [ email, setEmail ] = useState('');
-    const [ message, setMessage ] = useState('');
-    const [ banner, setBanner ] = useState('');
-    const [ bool, setBool ] = useState('');
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [banner, setBanner] = useState('');
+    const [bool, setBool] = useState('');
+
+
+    //handle functionalities
+    const handleNameChange = (e) => {
+        setName(e.target.value);
+        console.log(name);
+
+    }
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+        console.log(email)
+    }
+
+    const handleMessageChange = (e) => {
+        setMessage(e.target.value);
+        console.log(message)
+    }
+
+    //onSubmit
+    const formSubmit = (e) => {
+        e.preventDefault();
+
+        let data = {
+            name: name,
+            email: email,
+            message: message
+        }
+
+        setBool(true);
+
+        axios.post(`/contact`, data)
+            .then(res => {
+                setBanner(res.data.msg);
+                setBool(false);
+                setTimeout(() => {
+                    setBanner('');
+
+                }, 2000)
+
+                setName('');
+                setEmail('');
+                setMessage('');
+
+            }).catch(err => console.log(err))
+
+    }
+
+
 
 
     return (
@@ -17,23 +66,22 @@ const Contact = () => {
                 <h2 className="title"> Contact</h2>
                 <div className="contactForm-center">
                     <div className="contact_form">
-                        <form>
+                        <form onSubmit={formSubmit}>
                             <p>Lets get in touch!</p>
+                            <p>{banner}</p>
                             <label htmlFor="name">Name</label>
-                            <input type="text"
-                                placeholder="import name..." />
+                            <input type="text" placeholder="import name..." required
+                                value={name} onChange={handleNameChange} />
 
 
                             <label htmlFor="email">Email</label>
-                            <input type="email"
-                                placeholder="import email..." />
+                            <input type="email" placeholder="import email..." required
+                                value={email} onChange={handleEmailChange} />
 
 
                             <label htmlFor="message">Message</label>
-                            <textarea type='text'
-                                name="message"
-                                id=""
-                                placeholder='import contact reason...' />
+                            <textarea type='text' name="message" id="" placeholder='import contact reason...'
+                                value={message} onChange={handleMessageChange} />
 
                             <div className="send-btn">
                                 <button className="button" type="submit">Send Email</button>
