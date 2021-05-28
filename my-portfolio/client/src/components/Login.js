@@ -1,9 +1,9 @@
 import React, { useContext, useState } from 'react';
 import "../css/Login.css";
-import Register from './Register';
+// import Register from './Register';
 import { Link, useHistory } from 'react-router-dom';
 import axios from 'axios';
-// import { DataContext } from './context/GlobalContext';
+import { DataContext } from '../components/myContext/GlobalContext';
 
 
 
@@ -12,9 +12,12 @@ import axios from 'axios';
 
 
 const Login = () => {
+
+
     const history = useHistory();
     const [user, setUser] = useState({ name: '', email: '', password: '' })
-    
+    const state = useContext(DataContext);
+    const [isLogin, setIsLogin] = state.isLogin;
     
     const [err, setErr] = useState('');
 
@@ -41,7 +44,8 @@ const Login = () => {
             })
 
             setUser({ name: '', email: '', password: '' });
-
+            localStorage.setItem('tokenStore', res.data.token);
+            setIsLogin(true);
             
 
             setErr(res.data.msg);
@@ -101,7 +105,7 @@ const Login = () => {
             </div>
 
             {/* register */}
-            <Register />
+            {/* <Register /> */}
 
 
         </>

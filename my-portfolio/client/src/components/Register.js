@@ -60,29 +60,22 @@ const Register = () => {
 
                     <label htmlFor="name">Name</label>
                     <input type="text"
-                        placeholder="import name..."
-                        name="username"
-                        value={user.username}
-                        onChange={onchangeInput}
-                        required
+                        placeholder="import name..." name="username"
+                        value={user.username} onChange={onchangeInput} required
                     />
 
                     <label htmlFor="email">Email</label>
                     <input type="email"
                         placeholder="import email..."
                         name="email"
-                        value={user.email}
-                        onChange={onchangeInput}
-                        required
+                        value={user.email} onChange={onchangeInput} required
                     />
 
                     <label htmlFor="password">Password</label>
                     <input type="password"
                         placeholder="import password..."
                         name="password"
-                        value={user.password}
-                        onChange={onchangeInput}
-                        required
+                        value={user.password} onChange={onchangeInput} required
                     />
 
                     <div className="login-btn">

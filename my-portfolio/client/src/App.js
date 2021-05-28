@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
@@ -20,9 +20,16 @@ import EditEducation from './components/editComponent/EditEducation';
 //navbar scroll 
 import { Element } from 'react-scroll';
 
+//Admin Context
+// import { DataContext } from './components/myContext/GlobalContext';
 
 
 function App() {
+
+    // const state = useContext(DataContext);
+    // const [isLogin, setIsLogin] = state.isLogin;
+
+
   return (
     <div className="App">
       <NavBar />
@@ -54,9 +61,9 @@ function App() {
 
 
 
-      <Route exact path="/login" render={() => <Login />} />
+      <Route exact path="/login" render={() => <Login/> } />
 
-      <Route exact path="/admin" render={() => <Admin />} />
+      <Route exact path="/admin" render={() =><Admin/>} />
 
       <Route exact path="/edit/:id" component={EditAbout} />
       <Route exact path="/editProject/:id" component={EditProject} />

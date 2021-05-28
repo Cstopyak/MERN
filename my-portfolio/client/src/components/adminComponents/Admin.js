@@ -1,12 +1,16 @@
 import React, { useContext } from 'react';
-
+import AdminAhAh from './adminImg/AdminAhAh.gif';
 import AboutAdmin from './AboutAdmin';
 import ProjectAdmin from './ProjectAdmin';
 import EducationAdmin from './EducationAdmin';
 import { Link } from 'react-router-dom';
+import { DataContext } from '../myContext/GlobalContext';
+
 
 const Admin = () => {
 
+    const state = useContext(DataContext);
+    const [isLogin] = state.isLogin;
 
 
 
@@ -14,9 +18,9 @@ const Admin = () => {
         <div className="main-container">
             <br />
             <h2 className="title">Admin forms</h2>
-
-
-            <div className="admin-center">
+            {
+                isLogin ?
+                <div className="admin-center">
 
                 {/* aboutAdmin component */}
                 <h4 className="admin-title">About component</h4>
@@ -25,7 +29,7 @@ const Admin = () => {
 
                 <br />
                 <br />
-                <hr style={{ border: "1px solid lightgrey" }} />
+                <hr style={{ border: "1px solid white" }} />
                 <br />
 
                 {/*projectsAdmin component */}
@@ -36,7 +40,7 @@ const Admin = () => {
 
                 <br />
                 <br />
-                <hr style={{ border: "1px solid lightgrey" }} />
+                <hr style={{ border: "1px solid white" }} />
                 <br />
 
                 {/* educationAdmin component */}
@@ -46,7 +50,7 @@ const Admin = () => {
                 {/*end of educationAdmin component */}
                 <br />
                 <br />
-                <hr style={{ border: "1px solid lightgrey" }} />
+                <hr style={{ border: "1px solid white" }} />
                 <br />
 
 
@@ -57,13 +61,22 @@ const Admin = () => {
 
 
 
-            <div className="back_to_home">
-                <div className="back_box">
-                    <h2>Only admin can have accesss here</h2>
-                    <Link to="/">Back to home</Link>
-                </div>
+            
+            
 
-            </div>
+
+                    :
+                    
+
+                        
+                    <div className="back_to_home"> 
+                    <div className="back_box">
+                        <h2>Only Admin is allowed</h2><br/><span><img src={AdminAhAh} alt=""/></span>
+                        
+                        </div>
+                    
+                    </div>}
+
         </div>
     )
 }

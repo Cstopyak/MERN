@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import "../css/NavBar.css";
-
+import { DataContext } from '../components/myContext/GlobalContext';
 //scroll
 import {scroller} from 'react-scroll';
 
@@ -9,6 +9,11 @@ import {scroller} from 'react-scroll';
 
 
 const NavBar = () => {
+
+
+  //login Navbar
+  const state = useContext(DataContext);
+  const [isLogin, setIsLogin] = state.isLogin;
   const [toggle, setToggle] = useState();
 
 
@@ -34,12 +39,19 @@ const NavBar = () => {
     }
   }
 
+//clearing storage and logging out
+  const logOutSubmit = () =>{
+    localStorage.clear();
+    setIsLogin(false);
+  }
+
 
   return (
     <div className="nav-container">
       <nav>
         <div className="logoBtn">
-        <span><b>Cv:</b> <a href="/#" target="_blank" rel="noreferrer"><i className="fas fa-file-pdf"></i></a></span>
+          <span><b><a href="https://www.linkedin.com/in/colby-stopyak-0ab384143/"><i className="fab fa-linkedin"></i></a></b></span>
+        {/* <span><b>Cv:</b> <a href="/#" target="_blank" rel="noreferrer"><i className="fas fa-file-pdf"></i></a></span> */}
           <div className="btn" onClick={toggleAction}>
             <div className={toggle ? "bar1 animationBar" : "bar bar1"}></div>
             <div className={toggle ? "bar2 animationBar" : "bar bar2"}></div>
@@ -52,12 +64,15 @@ const NavBar = () => {
             <li onClick={()=>scrollToElement('home')}><Link to="/">Home</Link></li>
             <li onClick={()=>scrollToElement('About')}><Link to="/">About</Link></li>
             <li onClick={()=>scrollToElement('Education')}><Link to="/">Education</Link></li>
-            <li onClick={()=>scrollToElement('Project')}><Link to="/">Projects</Link></li>
+            <li onClick={()=>scrollToElement('Projects')}><Link to="/">Projects</Link></li>
             <li onClick={()=>scrollToElement('Contact')}><Link to="/">Contact</Link></li>
             
-            <li className="admin"><Link to="/admin">Admin</Link></li>
-            <li><Link to="/login">Login</Link></li>
-            
+            {/* <li className="admin"><Link to="/admin">Admin</Link></li> */}
+            {/* <li><Link to="/login">Login</Link></li> */}
+            <li className={isLogin?'':'adminLi'}><Link to={isLogin?"/admin/":"/"}>{isLogin?<div className="admin">Admin</div>:''}</Link></li>
+
+
+            <li onClick={logOutSubmit}><Link to={isLogin? '/':"/login"}> {isLogin?"Logout":"Login"}</Link></li>
           </ul>
         </div>
 
@@ -69,64 +84,3 @@ const NavBar = () => {
   )
 }
 export default NavBar;
-// class Navbar extends Component {
-//     render() {
-//         return (
-//             <Layout>
-//           <Header className="header-color" title="Hi, I'm Colby" scroll>
-//             <Navigation>
-//             <Link to="/">Home</Link>
-//               <Link to="/About">About</Link>
-//               <Link to="/projects">Projects</Link>
-//               <Link to="/resume">Resume</Link>
-//               <Link to="/contact">Contact</Link>
-//               <Link to="/register">Register</Link>
-//               <Link to="/Login">Login</Link>
-//               <Link to="/Admin">Admin</Link>
-
-//             </Navigation>
-//           </Header>
-//           <Drawer title="Portfolio">
-//             <Navigation>
-//               <Link to="/about">About</Link>
-//               <Link to="/resume">Resume</Link>
-//               <Link to="/contact">Contact</Link>
-//               <Link to="#">LinkedIn</Link>
-//               <Link to="#">Github</Link>
-//               <Link to="/register">Register</Link>
-//               <Link to="/Login">Login</Link>
-//               <Link to="/Admin">Admin</Link>
-//             </Navigation>
-//           </Drawer>
-
-//         </Layout>
-//             // <nav className="navBar">
-//             //     <ul className="nav__list">
-//             //         <div className="nav__container">
-//             //             <NavLink className="nav__section" to="/">
-//             //                 <li class Name=""> Home </li>
-//             //             </NavLink>
-
-
-
-//             //             <NavLink className="nav__section" to="/about">
-//             //                 <li class Name="nav__li"> About </li>
-//             //             </NavLink>
-
-
-
-//             //             <NavLink className="nav__section" to="/projects">
-//             //                 <li class Name="nav__li"> Projects </li>
-//             //             </NavLink>
-
-//             //             <NavLink className="nav__section" to="/contact">
-//             //                 <li class Name="nav__li"> Contact </li>
-//             //             </NavLink>
-
-//             //         </div>
-//             //     </ul>
-//             // </nav>
-//         )
-//     }
-// }
-// export default Navbar

@@ -49,11 +49,11 @@ app.use('/' ,require('./server/routes/educationRoute'));
 PORT =process.env.PORT || 5000;
 
 
-// // static assets
-// if(process.env.NODE_ENV==='production'){
-//     app.use(express.static('client/build'));
-//     app.get('*', (req, res)=>res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')))
-// }
+// // static assets for deployment
+if(process.env.NODE_ENV==='production'){
+    app.use(express.static('client/build'));
+    app.get('*', (req, res)=>res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')))
+}
 
 
 

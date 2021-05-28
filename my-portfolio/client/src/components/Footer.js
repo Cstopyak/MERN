@@ -24,7 +24,7 @@ const Footer = () => {
                         <div className="contact-center-media">
                             <h3> Get to know me</h3>
                             <div className="contact-media">
-                                <li><a href=""><i className="fab fa-linkedin">LinkedIn</i></a></li>
+                                <li><a href="https://www.linkedin.com/in/colby-stopyak-0ab384143/"><i className="fab fa-linkedin">LinkedIn</i></a></li>
                                 <li><a href=""><i className="fab fa-github"></i>GitHub</a></li>
                             </div>
                         </div>

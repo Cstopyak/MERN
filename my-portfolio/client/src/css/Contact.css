@@ -37,6 +37,7 @@
     margin-bottom: 5px;
 }
 .contact_form button{
+    align-items: center;
     margin-top: 15px;
     padding: 5px;
     background:rgb(19,126,233);
@@ -47,6 +48,7 @@
     font-size:16px;
     letter-spacing: 0.1rem;
     width: 160px;
+    align-self: center;
 
 }
 .contact_form form input,.contact_form form textarea{
@@ -55,6 +57,16 @@
     border:1px solid white;
 }
 
+button .load{
+    width: 100%;
+
+}
+
+button .load img{
+    width:60px ;
+    
+
+}
 
 
 
@@ -66,11 +78,7 @@
         padding: 10px;
         
     }
-    .contact-info{
-        flex:1;
-        margin-bottom: 0;
-        align-self: center;
-    }
+    
 
 
     }
@@ -86,55 +94,12 @@
         
         }
 
-        .contact-info{
-            flex:0 0 400px;
         
-        }
 
     }
 
 
 
-/* .Contact__Container{
-    margin: 0 auto;
-    
-    background: #C33764;  
-    background: -webkit-linear-gradient(to right, #1D2671, #C33764);  
-    background: linear-gradient(to right, #1D2671, #C33764); 
-}
-
-.Contact__Grid{
-    margin: 0 auto;
-    width: 100%;
-    text-align: center;
-    
-background: #C33764;  
-background: -webkit-linear-gradient(to right, #1D2671, #C33764);  
-background: linear-gradient(to right, #1D2671, #C33764); 
-
-}
-
-.Form{
-    
-    width: 100%;
-    margin: auto;
-    padding: auto;
-    opacity: 1;
-    color: white;
-    
-}
-
-.Form__Control{
-    margin: auto;
-    padding: auto;
-    padding-top: 8px;
-    color: white;
-    
-}
-.Label{
-    font-weight: bold;
-    padding-right: 12px;
-} */
 
 
 

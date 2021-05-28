@@ -291,23 +291,20 @@ form button:hover{
 
 .back_box{
     margin-top: 50px;
+    
+    
+}
+.back_box img{
+    margin-left: 50px;
 }
 
 .back_box h2{
     letter-spacing: 0.1rem;
-    color:crimson;
+    color:white;
     margin-bottom: 20px;
     font-style: italic;
     text-decoration: underline;
 }
 
-.back_box a{
-    background-color: dodgerblue;
-    padding:5px 10px;
-    color: white;
-    font-size: 18px;
-}
 
-.back_box a:hover{
-    background-color: rgb(82, 156, 230);
-}
+

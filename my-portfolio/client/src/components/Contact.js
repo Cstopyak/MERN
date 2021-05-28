@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "../css/Contact.css";
 import axios from 'axios';
+import Loading from '../images/Loading.gif';
 
 const Contact = () => {
 
@@ -14,18 +15,18 @@ const Contact = () => {
     //handle functionalities
     const handleNameChange = (e) => {
         setName(e.target.value);
-        console.log(name);
+        // console.log(name);
 
     }
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
-        console.log(email)
+        // console.log(email)
     }
 
     const handleMessageChange = (e) => {
         setMessage(e.target.value);
-        console.log(message)
+        // console.log(message)
     }
 
     //onSubmit
@@ -84,7 +85,7 @@ const Contact = () => {
                                 value={message} onChange={handleMessageChange} />
 
                             <div className="send-btn">
-                                <button className="button" type="submit">Send Email</button>
+                            <button type="submit" >Send Email{bool? <b className="load" ><img src={Loading} alt=""/></b>:''}</button>
                             </div>
                         </form>
                     </div>
