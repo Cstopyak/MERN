@@ -74,7 +74,7 @@ const userController = {
         }
     },
 
-    veryifiedToken: (req,res) =>{
+    veryifiedToken: async (req,res) =>{
         // res.json(req.user);
         try {
             
