@@ -1,10 +1,10 @@
 .Contact{
-    margin: -3px;
+    margin: 0px auto;
 }
 
 .contactForm-center{
     max-width: 1280px;
-    padding: 10px;
+    padding: 0px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column-reverse;

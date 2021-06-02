@@ -3,9 +3,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const fileUpload = require('express-fileupload');
-const app = express();
 const path = require('path');
 
+const app = express();
 // middleware 
 app.use(express.json());
 app.use(cors());

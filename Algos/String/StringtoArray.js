@@ -24,6 +24,6 @@ function Reverse(string){
     
 }
 string = "Hello World"
-console.log(Reverse(string));
+console.log(Reverse("Hello World"));
 
 
